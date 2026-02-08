@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Artikel - Mitra Tani Abadi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='article/style.css') }}" />
+  </head>
+  <body>
+    <!-- Header Artikel -->
+    <header>
+      <div class="container-narrow">
+        <span class="category">Edukasi Tanaman</span>
+
+        <h1>Penyakit Blas (Pyricularia oryzae) pada Tanaman Padi</h1>
+
+        <div class="author-meta">
+          <img src="https://ui-avatars.com/api/?name=Admin&background=f1f5f9&color=64748b" class="author-img" alt="Penulis" />
+          <div class="author-info">
+            <p>Admin distan</p>
+            <p>18 Januari 2023 • dilihat 65597 kali</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <main class="container-narrow">
+      <figure class="main-figure">
+        <div class="img-wrapper">
+          <img src="https://distan.bulelengkab.go.id/uploads/konten/85_penyakit-blas-pyricularia-oryzae-pada-tanaman-padi.jpg" alt="Pemandangan Sawah" />
+        </div>
+        <figcaption class="img-caption">Ilustrasi lahan pertanian yang sehat.</figcaption>
+      </figure>
+
+      <article class="article-body">
+        <p>
+          sPenyakit blas adalah penyakit bercak daun pada tanaman padi yang disebabkan oleh cendawan Pyricularia oryzae. Selain daun, penyakit ini juga menyerang pelepah, batang dan bulir padi. Pada awalnya penyakit blas banyak menyerang
+          tanaman padi darat (gogo), namun kini penyakit blas juga menyerang tanaman padi sawah.
+        </p>
+
+        <p>
+          Jamur Pyricularia oryzae dapat menginfeksi pada semua fase pertumbuhan tanaman padi mulai dari persemaian sampai menjelang panen. Pada fase bibit dan pertumbuhan vegetatif tanaman padi. Pyricularia oryzae menginfeksi bagian daun
+          dan menimbulkan gejala penyakit yang berupa bercak coklat berbentuk belah ketupat yang disebut blas daun.
+        </p>
+
+        <p>
+          Pada fase pertumbuhan generatif tanaman padi, gejala penyakit blas berkembang pada tangkai/leher malai disebut blas leher/potong leher. Perkembangan yang parah dari penyakit blas leher infeksinya dapat mencapai bagian gabah dan
+          patogennya dapat terbawa gabah sebagai pathogen tular benih (seed borne). Penyebaran spora cendawan Pyricularia oryzae dibantu oleh angin dan dapat mencapai radius sejauh 2 km, sehingga penyebarannya lumayan jauh.
+        </p>
+
+        <h3>Gejala penyakit blas:</h3>
+        <p>Gunakan daftar urutan untuk menjelaskan prosedur atau panduan teknis agar lebih mudah diikuti oleh pembaca:</p>
+        <ol>
+          <li>Adanya bercak berbentuk belah ketupat pada daun,pada bagian tepi bercak berwarna kecoklatan dan pada bagian tengah bercak berwarna abu-abu atau putih.</li>
+          <li>Pada malai terlihat jika ada tangkai malai yang membusuk/busuk leher.busuk leher menyebabkan gabah hampa jika serangan terjadi sebelum masa pengisian bulir.</li>
+          <li>Infeksi pada batang menyebabkan busuk batang dan mudah rebah.</li>
+        </ol>
+        <p>Penyakit blast leher/potong leher dapat menurunkan hasil secara nyata, karena menyebabkan leher malai menjadi busuk atau patah, sehingga proses pengisian malai menjadi terganggu dan banyak terbentuk bulir padi yang hampa.</p>
+
+        <h3>Hal – hal yang menjadi penyebab penyakit blast:</h3>
+        <ol>
+          <li>Penyebaran melalui tanaman inang seperti jagung dan rumput-rumputan.</li>
+          <li>Faktor pemupukan yaitu penggunaan pupuk Nitrogen yang berlebihan menyebabkan tanaman menjadi lemah dan rentan terhadap serangan jamur.</li>
+          <li>Jarak tanam yang terlalu rapat dapat menyebabkan lingkungan menjadi lembab, dan jamur berkembang dengan cepat pada lingkungan yang lembab.</li>
+          <li>Penggunaan benih yang bukan benih unggul dan varietas yang tidak tahan penyakit blas.</li>
+        </ol>
+
+        <h3>Pengendalian dan pencegahan penyakit blas dapat dilakukan dengan:</h3>
+        <ol>
+          <li>Menggunakan varietas unggul yang tahan terhadap penyakit blas.</li>
+          <li>Menanam padi secara serempak, sehingga mudah dalam penanganan.</li>
+          <li>Menanam dengan jarak yang tidak terlalu rapat, sehingga mengurangi kelembaban.</li>
+          <li>Tidak menanam padi dengan varietas yang sama secara terus menerus, lakukan rotasi varietas untuk meminimalisir serangan penyakit blas.</li>
+          <li>Perlakuan benih dengan fungisida, pengendalian dini dengan perlakuan benih sangat dianjurkan untuk menyelamatkan persemaian sampai umur 30 hari setelah sebar.</li>
+          <li>Penyemprotan dengan fungisida.</li>
+        </ol>
+
+        <h2>BPP Kecamatan Sukasada</h2>
+      </article>
+    </main>
+
+    <!-- Footer Minimalis -->
+    <footer>
+      <div class="container-narrow footer-content">
+        <p class="copyright">&copy; 2025 PadiDetect | Solusi Cerdas untuk Petani Indonesia</p>
+      </div>
+    </footer>
+
+    <script>
+      // Efek border navbar saat scroll
+      const nav = document.getElementById('mainNav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          nav.style.borderColor = '#e2e8f0';
+        } else {
+          nav.style.borderColor = '#f1f5f9';
+        }
+      });
+    </script>
+  </body>
+</html>

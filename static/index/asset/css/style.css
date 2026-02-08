@@ -1,0 +1,585 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffbea;
+  color: #1b4332;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 15px 80px; */
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #2d6a4f;
+  font-size: 22px;
+  text-decoration: none;
+}
+/* Link navigasi */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #2d6a4f;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-nav a:hover {
+  color: #1b4332;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #40916c;
+}
+
+/* Hero Section */
+.hero {
+  padding: 120px 0;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(45,106,79,0.15), transparent 70%);
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-img {
+  max-width: 560px;;
+  width: 100%;
+  height: auto;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1b4332;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.hero-text {
+  font-size: 1.1rem;
+  color: #2d6a4f;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.btn-cta {
+  background-color: #2d6a4f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 26px;
+  transition: background-color 0.3s;
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.btn-cta:hover {
+  background-color: #1b4332;
+}
+.feature-tags span {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #40916c;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-right: 8px;
+  font-size: 0.85rem;
+}
+
+/* Tentang Section */
+.tentang {
+  scroll-margin-top: 30px;
+  padding: 120px 0;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.tentang::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(45, 106, 79, 0.08) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.title span {
+  color: #2d6a4f;
+}
+
+.description {
+  font-size: 16px;
+  color: #475569;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 35px 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  text-align: left;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px -15px rgba(71, 85, 105, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  border-color: #2d6a4f;
+  box-shadow: 0 20px 30px -10px rgba(45, 106, 79, 0.15);
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.icon-green {
+  background-color: #2d6a4f;
+}
+.icon-yellow {
+  background-color: #eab308;
+}
+.icon-blue {
+  background-color: #2563eb;
+}
+
+.icon-box svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Alur Kerja section */
+.alurkerja {
+  padding: 120px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.step-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #f8fafc;
+  border: 2px solid #f1f5f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 28px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #047857;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.step-card:hover .icon-circle {
+  background-color: #ecfdf5;
+  border-color: #a7f3d0;
+  transform: translateY(-5px);
+  color: #059669;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.1);
+}
+
+.step-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 260px;
+  margin: 0;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2d6a4f;
+  padding: 30px 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+  margin-top: 50px;
+}
+
+/* Tampilkan panah horizontal, sembunyikan panah vertical */
+.arrow-horizontal {
+  display: block;
+}
+
+.arrow-vertical {
+  display: none;
+}
+
+svg.icon-svg {
+  width: 36px;
+  height: 36px;
+}
+
+svg.arrow-svg {
+  width: 48px;
+  height: 48px;
+  stroke-width: 2.5;
+}
+
+/* Artikel Section */
+.artikel-section {
+  scroll-margin-top: 30px;
+  background-color: #fffbea;
+  padding: 120px 0;
+}
+
+.artikel-title {
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.artikel-subtitle {
+  color: #666;
+  font-size: 17px;
+  margin-bottom: 40px;
+}
+
+/* Container Slider Utama */
+.slider-wrapper {
+  position: relative;
+  padding: 0 40px;
+}
+
+/* Area Geser (Scroll Area) */
+.article-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.article-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Item Artikel menggunakan Grid Bootstrap */
+.article-item {
+  flex: 0 0 100%; 
+  scroll-snap-align: start;
+}
+
+/* Card Styling */
+.article-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-card .content {
+  padding: 25px;
+}
+
+.article-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.article-card a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Tombol Navigasi Custom */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.prev-btn {
+  left: -10px;
+}
+.next-btn {
+  right: -10px;
+}
+
+.faq-section {
+  scroll-margin-top: 30px;
+  background-color: #fffbea;
+  padding: 120px 0;
+}
+
+.accordion-item {
+  margin-bottom: 15px !important;
+  border-color: #ffffff !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.accordion-button {
+  background-color: #ffffff;
+  color: #1b4332 !important;
+  font-weight: 600 !important;
+  padding: 18px 25px;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #2d6a4f !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 0.25rem #fffbea !important;
+}
+
+.accordion-body {
+  text-align: left;
+  background-color: #ffffff;
+  color: #2d6a4f;
+  padding: 25px;
+  border-top: 1px solid #dcedc8;
+}
+
+footer {
+  background-color: #1b4332;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .hero-title,
+  .hero-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-img {
+    max-width: 360px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .section-container {
+    padding: 40px 20px;
+  }
+}
+
+/* Responsif Desktop */
+@media (min-width: 868px) {
+  .steps-wrapper {
+    flex-direction: row;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .arrow-container {
+    padding: 35px 10px 0 10px;
+  }
+
+  .arrow-horizontal {
+    display: block;
+  }
+  .arrow-vertical {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .article-item {
+    flex: 0 0 calc(50% - 10px); /* Tablet: 2 kartu */
+  }
+}
+
+@media (min-width: 992px) {
+  .article-item {
+    flex: 0 0 calc(33.333% - 14px); /* Desktop: 3 kartu */
+  }
+}
+
+@media (min-width: 1200px) {
+  .prev-btn {
+    left: -30px;
+  }
+  .next-btn {
+    right: -30px;
+  }
+}

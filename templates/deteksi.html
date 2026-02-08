@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PadiDetect</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='deteksi/style.css') }}" />
+  </head>
+  <body class="w-full">
+    <!-- Home Button -->
+    <div id="home-btn"><i class="fas fa-home"></i> Home</div>
+
+    <section>
+      <h3>Upload Gambar Penyakit Tanaman Padi</h3>
+      <p>Format gambar yang didukung PNG, JPG, JPEG</p>
+
+      <div class="upload-box" id="uploadBox">
+        <div id="upload-placeholder">
+          <i class="fas fa-image"></i>
+          <p>Pilih Gambar atau Ambil Foto</p>
+        </div>
+
+        <div id="camera-container">
+          <video id="video" autoplay playsinline></video>
+          <button id="captureButton" class="btn-cta btn-capture"><i class="fas fa-camera"></i> Ambil Foto</button>
+          <button id="cancelCameraButton" class="btn-cta btn-cancel">Batal</button>
+        </div>
+
+        <img id="preview" src="" alt="Pratinjau Gambar" />
+
+        <input type="file" id="imageInput" accept="image/png, image/jpeg, image/jpg" style="display: none" />
+      </div>
+
+      <button id="detectButton" class="btn-cta" disabled>
+        <i class="fas fa-magnifying-glass"></i>
+        Deteksi Gambar
+      </button>
+    </section>
+
+    <div id="loadingDiv" class="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <canvas id="hiddenCanvas" style="display: none"></canvas>
+
+    <!-- Tautan ke berkas JavaScript kustom -->
+    <script src="{{ url_for('static', filename='deteksi/script.js') }}"></script>
+  </body>
+</html>
